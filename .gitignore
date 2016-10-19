@@ -24,6 +24,5 @@ css/old/
 *.old
 
 /plugin/Beispiel_Plugin
-*dist
-*nbproject
-*test
+nbproject/
+test/
