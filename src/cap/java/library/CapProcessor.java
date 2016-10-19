@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cap.php.library;
+package cap.java.library;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;

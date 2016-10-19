@@ -3,13 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cap.php.library;
+package cap.java.library;
 
 import java.io.FileNotFoundException;
 import java.io.UnsupportedEncodingException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.application.Application;
+import static javafx.application.Application.launch;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -21,7 +22,7 @@ import javafx.stage.Stage;
  *
  * @author nspan
  */
-public class CAP_PHP_Library extends Application {
+public class CAPJavaLibrary extends Application {
     
     @Override
     public void start(Stage primaryStage) {
@@ -39,9 +40,9 @@ public class CAP_PHP_Library extends Application {
                 try {
                     test+= cap.saveCap("test.cap.xml", 0);
                 } catch (FileNotFoundException ex) {
-                    Logger.getLogger(CAP_PHP_Library.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(CAPJavaLibrary.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (UnsupportedEncodingException ex) {
-                    Logger.getLogger(CAP_PHP_Library.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(CAPJavaLibrary.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 System.out.println(test);
             }

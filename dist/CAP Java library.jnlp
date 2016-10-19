@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="CAP PHP Library.jnlp">
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="CAP Java library.jnlp">
   <information>
-    <title>CAP PHP Library</title>
+    <title>CAP Java library</title>
     <vendor>nspan</vendor>
     <description>null</description>
     <offline-allowed/>
@@ -9,9 +9,9 @@
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
   </resources>
-  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="CAP PHP Library" >
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="CAP Java library" >
     <param name="requiredFXVersion" value="8.0+"/>
   </applet-desc>
-  <jfx:javafx-desc  width="800" height="600" main-class="cap.php.library.CAP_PHP_Library"  name="CAP PHP Library" />
+  <jfx:javafx-desc  width="800" height="600" main-class="cap.java.library.CAPJavaLibrary"  name="CAP Java library" />
   <update check="always"/>
 </jnlp>
