@@ -27,7 +27,7 @@ public class CAPJavaLibrary extends Application {
     @Override
     public void start(Stage primaryStage) {
         Button btn = new Button();
-        btn.setText("Say 'Hello World'");
+        btn.setText("Make test.cap.xml");
         btn.setOnAction(new EventHandler<ActionEvent>() {
             
             @Override
