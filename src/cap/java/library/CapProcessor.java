@@ -49,7 +49,7 @@ import java.util.Arrays;
         //CapRead capRead;
         String capSoap;
 
-        alertBlock[] alert = new alertBlock[1];
+        alertBlock[] alert = new alertBlock[0];
         private int alertIndex = 0;
 
         CapProcessor( String output, String cap_mime){
@@ -68,14 +68,13 @@ import java.util.Arrays;
         }
 
         // sets/adds an alert block
-        public alertBlock setAlert(int index){
-            if(index == 0) return alert[alertIndex++] = new alertBlock();
-            else return alert[index] = new alertBlock();
+        public alertBlock[] setAlert(){
+            return alert = this.push(alert, new alertBlock());
         }
 
         // adds an alert block [relink: setAlert()]
-        public alertBlock addAlert(int index){
-            return this.setAlert(index);
+        public alertBlock[] addAlert(){
+            return this.setAlert();
         }
 
         // converts cap object to a xml string
@@ -104,7 +103,8 @@ import java.util.Arrays;
         public void makeTestCAP(boolean debug){
             this.debug = debug;
 
-            alertBlock alertB = this.addAlert(0);
+            this.addAlert();
+            alertBlock alertB = this.getAlert(0);
 
             alertB.setIdentifier("test.123456789.123");
             alertB.setSender("test.at");
@@ -211,6 +211,13 @@ import java.util.Arrays;
                 System.out.println(debug_val);        
             }
         }
+
+        private alertBlock[] push(alertBlock[] array, alertBlock push) {
+            alertBlock[] longer = new alertBlock[array.length + 1];
+            System.arraycopy(array, 0, longer, 0, array.length);
+            longer[array.length] = push;
+            return longer;
+        }
     }
 
 
@@ -257,7 +264,7 @@ import java.util.Arrays;
         // The time and date of the origination of the alert message (REQUIRED)
         public String getSent(){ return sent; }
         public String setSent(long val){ 
-            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd-hh.mm.ss");
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssXXX");
             return sent = formatter.format(val);
         }
         
@@ -523,21 +530,21 @@ import java.util.Arrays;
         // The effective time of the information of the alert message (OPTIONAL)
         public String getEffective(){ return effective; }
         public String setEffective(long val){ 
-            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd-hh.mm.ss");
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssXXX");
             return effective = formatter.format(val);
         }
         
         // The expected time of the beginning of the subject event of the alert message (OPTIONAL)
         public String getOnset(){ return onset; }
         public String setOnset(long val){
-            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd-hh.mm.ss");
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssXXX");
             return onset = formatter.format(val);
         }
         
         // The expiry time of the information of the alert message (OPTIONAL)
         public String getExpires(){ return expires; }
         public String setExpires(long val){ 
-            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd-hh.mm.ss");
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssXXX");
             return expires = formatter.format(val);
         }
         
