@@ -1,5 +1,5 @@
 # Cap Java Library
-A common alerting protocol library for processing and producing XML-CAP's from a JQuery HTML form.
+A common alerting protocol library for processing and producing XML-CAP's.
 
 It's an Open Source software (written in Java) designed for users of the [OASIS common alerting protocol] (http://docs.oasis-open.org/emergency/cap/v1.2/CAP-v1.2-os.html) like
 * software developers
