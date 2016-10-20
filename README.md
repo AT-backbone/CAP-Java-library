@@ -8,7 +8,7 @@ You can freely use, study, modify or distribute it according to it's Software li
 
 ## License
 
-The Cap-PHP Library released under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version (GPL-3+).
+The Cap Java Library released under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version (GPL-3+).
 
 See the [COPYING](COPYING) file for a full copy of the license.
 
